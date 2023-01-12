@@ -15,11 +15,23 @@ header {
 }
 
 nav {
-    display: flex;
+    display: inline-block;
     flex-flow: row wrap;
     justify-content: space-around;
     padding-top: 2rem;
     padding-bottom: 1rem;
+}
+
+nav:after {
+    width: 100%;
+    position: absolute;
+    transform: scaleX(0);
+}
+
+nav:hover {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: width 2s;
 }
 
 h2 {
